@@ -1,5 +1,18 @@
 # ![logo](https://raw.githubusercontent.com/sagemathinc/smc/master/src/webapp-lib/favicon-32x32.png) CoCalc
 
+## !! Tuxae Update !!
+
+Install using docker:
+
+```bash
+wget https://raw.githubusercontent.com/sagemathinc/cocalc-docker/master/Dockerfile
+sed -i "s/git clone https:\/\/github.com\/sagemathinc\/cocalc.git/git clone -b ldapauth https:\/\/github.com\/Tuxae\/cocalc.git/g" Dock
+erfile
+sudo docker build -t tuxae/cocalc .
+sudo docker run -d -p 80:80 --name tuxae-cocalc tuxae/cocalc
+```
+
+
 #### _Collaborative Calculation in the Cloud_
 
 **CoCalc** offers collaborative calculation in the cloud.
